@@ -1,0 +1,85 @@
+
+:root {
+	--bg: #07172b;
+	--surface: #0d2740;
+	--accent: #0f4187;
+	--accent-2: #0a3f8f;
+	--muted: #9fb5d3;
+	--text: #e6f4ff;
+	--card: #062033;
+}
+
+* { box-sizing: border-box; }
+body {
+	margin: 0;
+	font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	background: linear-gradient(180deg, var(--bg), #041022);
+	color: var(--text);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.45;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	padding: 2rem;
+	background: linear-gradient(90deg, rgba(11,91,215,0.06), transparent);
+	border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+h1 { font-size: 1.6rem; margin: 0; }
+h2 { font-size: 1.2rem; margin: 0 0 0.6rem 0; }
+h3 { font-size: 1rem; margin: 0 0 0.4rem 0; }
+
+.title { color: var(--muted); font-weight: 600; }
+header a {
+	color: var(--accent);
+	font-weight: 600;
+	text-decoration: none;
+}
+.city { color: var(--muted); }
+
+section { padding: 1.5rem 2rem; }
+section h2 { color: var(--accent); }
+
+
+/* Card for non-skills sections */
+section > div:not(.skills) {
+	background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+	border: 1px solid rgba(255,255,255,0.03);
+	padding: 1rem;
+	border-radius: 8px;
+}
+
+.skills {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1rem;
+}
+.skills .skill {
+	background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+	border: 1px solid rgba(255,255,255,0.03);
+	padding: 1rem;
+	border-radius: 8px;
+}
+.skills .skill h2, .skills .skill h3 { margin-bottom: 0.6rem; color: var(--accent-2); }
+.skills .skill div { padding: 0; background: transparent; border: none; }
+
+.skills h2, .skills h2 { color: var(--accent-2); }
+
+p { margin: 0 0 0.6rem 0; color: rgba(230,244,255,0.95); }
+
+footer {
+	padding: 1rem;
+	text-align: center;
+	color: var(--muted);
+	border-top: 1px solid rgba(255,255,255,0.02);
+}
+
+@media (max-width: 600px) {
+	header { flex-direction: column; align-items: flex-start; }
+	body { font-size: 15px; }
+}
